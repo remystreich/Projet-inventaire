@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventaire</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>
+            Inventaire des stocks
+        </h1>
+        <nav>
+            <div>
+                <button id="searchButton">Rechercher</button>
+            </div>
+            <div>
+                <button id="create">Ajouter un nouvel item</button>
+            </div>
+            <div>
+                <button id="returnList">Revenir à la liste</button>
+            </div>
+            <div>
+                <button id="createList">Liste de courses</button>
+            </div>
+        </nav>
+    </header>
+  
+    <main>
+        <section id="filters">
+            <h2>Filtres</h2>
+            <h4>Par nom</h4>
+            <input class="request" id="searchName" onkeyup="" type="text" name="search" placeholder="Rechercher par nom">
+            <h4>Par type</h4>
+            <select class="request" id="searchType">
+                <option></option>
+                <option>Produit frais</option>
+                <option>Conserve</option>
+                <option>Produit sec</option>
+                <option>Consommable</option>
+                <option>Surgelé</option>
+            </select>
+            <h4>Pric inférieur à:</h4>
+            <input class="request" id="searchPrice" onkeyup="" type="text" name="search" placeholder="Prix inférieur à">
+            <h4>Dlc inférieure au:</h4>
+            <input class="request" type="date" id="searchDlc">
+            <button id="filterBtn" type="button">Filtrer</button>
+            <button id="hideSearchBar" type="button">Masquer la barre</button>
+
+        </section>
+        <div id="gridProduct">
+
+        </div>
+        <dialog id="modalForm">
+            <form action="" id="form">
+                <h3>Ajout d'un d'une nouvelle référence</h3>
+                <div>
+                    <label for="name">Nom du produit</label>
+                    <input type="text" id="name">
+                </div>
+                <div>
+                    <label>Type</label>
+                        <select id="type">
+                            <option></option>
+                            <option>Produit frais</option>
+                            <option>Conserve</option>
+                            <option>Produit sec</option>
+                            <option>Consommable</option>
+                            <option>Surgelé</option>
+                        </select>
+                    
+                </div>
+                <div>
+                    <label for="number">Nombre</label>
+                    <input type="number" id="number">
+                </div>
+                <div>
+                    <label for="dlc">DLC</label>
+                    <input type="date" id="dlc">
+                </div>
+                <div>
+                    <label for="price">Prix d'achat en €</label>
+                    <input type="number" name="" id="price">
+                </div>
+                <button id="updateSupply" type="button">Valider</button>
+            </form>
+        </dialog>
+    </main>
+    <dialog></dialog>
+    <script src="../models/Supply.js"></script>
+    <script src="../models/Stock.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>
+

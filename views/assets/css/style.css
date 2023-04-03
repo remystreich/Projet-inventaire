@@ -1,0 +1,65 @@
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px; 
+}
+h1{
+    text-align: center;
+    margin-bottom: 50px;
+}
+header{
+    border-bottom: 1px solid;
+    margin: 0;
+}
+#gridProduct{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 20px;
+    grid-auto-rows: 400px;
+  }
+  /* Screen larger than 900px? 3 columns */
+  @media (min-width: 900px) {
+    #gridProduct { grid-template-columns: repeat(4, 1fr); }
+  }
+  .card{
+    border: solid 2px;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1;
+    text-align: center;
+
+  }
+  form{
+    display: grid;
+    grid-template-columns: 500px;
+    
+    grid-gap: 30px;
+  }
+  form div{
+    display: grid;
+    grid-template-columns: 200px 250px;
+  }
+  button{
+    width: fit-content;
+  }
+  #filters{
+    display: none;
+    flex-direction: column;
+    
+  }
+  main{
+    display: grid;
+    grid-gap: 30px;
+    
+  }
+ .cardFooter{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 10px;
+ }
+ button{
+  color: aqua;
+ }
