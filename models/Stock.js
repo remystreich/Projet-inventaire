@@ -46,9 +46,9 @@ class Stock {
             container.appendChild(btnContainer)
 
             let btnUpdate = document.createElement('button')
-            btnUpdate.innerHTML = "Update"
+            btnUpdate.innerHTML = "Mettre à jour"
             let btnDelete = document.createElement('button')
-            btnDelete.innerHTML = "delete"
+            btnDelete.innerHTML = "Supprimer"
             btnUpdate.addEventListener('click', () => {
                 this.displayUpdate(element)
             })
@@ -65,12 +65,12 @@ class Stock {
     deleteItem(article) {
         let index = this.item.indexOf(article)
         this.item.splice(index, 1)
-        this.displayItem()
+        this.displayItem(this.item)
     }
     updateItem(article, oldArticle) {
         let index = this.item.indexOf(oldArticle)
         this.item[index] = article
-        this.displayItem()
+        this.displayItem(this.item)
     }
 
     displayUpdate(item) {
@@ -107,7 +107,7 @@ class Stock {
                     <label for="price">Prix d'achat en €</label>
                     <input type="number" name="" id="updatePrice" value =${item.price}>
                 </div>
-                <button id="updateArticle" type="button">Valider</button>
+                <button class="btn" id="updateArticle" type="button">Valider</button>
             </form>
        
        `
@@ -117,9 +117,9 @@ class Stock {
             let number = document.querySelector("#updateNumber").value
             let dlc = document.querySelector("#updateDlc").value
             let price = document.querySelector("#updatePrice").value
-
             let newItem = new Supply(name, type, number, dlc, price)
             this.updateItem(newItem, item)
+            
         })
     }
 

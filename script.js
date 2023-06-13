@@ -60,10 +60,10 @@ searchbar.addEventListener('click', () => {
 let returnList = document.getElementById('returnList')
 returnList.addEventListener('click', () => {
     itemManager.returnList()
-
 })
 
 let createList = document.getElementById('createList')
 createList.addEventListener('click', () => {
     itemManager.groceryList()
 })
+
